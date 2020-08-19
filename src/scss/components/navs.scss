@@ -1,0 +1,30 @@
+.nav {
+  width: 87%;
+  max-height: 0;
+  border-radius: $radius;
+  position: absolute;
+  top: 96px;
+  align-self: center;
+  overflow: hidden;
+  transition: max-height .3s ease-out;
+  background-color: $primary-color;
+  ul {
+    padding: 23px 25px 15px 25px;
+    text-align: center;
+  }
+  div + ul {
+    padding: 15px 25px 23px 25px;
+  }
+  li {
+    padding: 15px 0;
+  }
+  li a {
+    font-weight: 700;
+    color: white;
+  }
+}
+
+.nav-items {
+  opacity: 0;
+  transition: opacity .2s;
+}

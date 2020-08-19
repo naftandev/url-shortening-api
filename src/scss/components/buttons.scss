@@ -1,0 +1,34 @@
+.button {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  font-family: $font;
+  font-weight: 700;
+  font-size: 1em;
+  color: white;
+  background-color: $secundary-color;
+  outline: none;
+}
+
+%button-main-radius {
+  border-radius: 30px;
+}
+
+.button--register {
+  width: 100%;
+  @extend %button-main-radius;
+}
+
+.button--start {
+  width: 200px;
+  padding: 15px 20px;
+  @extend %button-main-radius;
+}
+
+.button--hero {
+  padding: 13px;
+  font-size: 1.1em;
+}
+
+.button--shortener {
+  border-radius: 5px;
+}
