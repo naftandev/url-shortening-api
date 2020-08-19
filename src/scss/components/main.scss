@@ -37,23 +37,37 @@
   background-color: $very-light-color;
 }
 
-.shortener {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-  margin: -105px 0 90px 0;
-  gap: 15px;
-  border-radius: $radius;
-  background: url('../assets/images/bg-shorten-mobile.svg') right top no-repeat, $primary-color;
+.shortened-urls {
+  margin-bottom: 85px;
 }
 
-.input {
-  padding: 10px 15px;
-  border: 1px solid transparent;
+.url-container {
+  padding: 12px 0;
+  margin-bottom: 23px;
   border-radius: $radius2;
-  font-family: $font;
-  font-size: .9em;
-  color: $gray-color;
+  font-size: .88em;
+  background-color: white;
+}
+
+%overflow-dots-text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.original-url {
+  padding: 0 15px 10px 15px;
+  color: $dark-color;
+  @extend %overflow-dots-text
+}
+
+.shortened-url {
+  padding: 13px 15px 0 15px;
+  span {
+    color: $secundary-color;
+    @extend %overflow-dots-text
+  }
 }
 
 .stats {

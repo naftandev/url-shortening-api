@@ -83,6 +83,7 @@ li a {
 }
 
 .button {
+  width: 100%;
   padding: 10px 20px;
   border: 1px solid transparent;
   font-family: "Poppins", sans-serif;
@@ -93,17 +94,14 @@ li a {
   outline: none;
 }
 
-.button--start, .button--register {
-  border-radius: 30px;
-}
-
 .button--register {
-  width: 100%;
+  border-radius: 30px;
 }
 
 .button--start {
   width: 200px;
   padding: 15px 20px;
+  border-radius: 30px;
 }
 
 .button--hero {
@@ -112,12 +110,15 @@ li a {
 }
 
 .button--shortener {
+  margin-top: 11px;
   border-radius: 5px;
 }
 
-.fa-bars {
-  font-size: 1.6em;
-  color: #9e9aa7;
+.button--copy {
+  padding: 7.5px;
+  margin: 12px 0 5px 0;
+  border-radius: 5px;
+  font-size: 0.95em;
 }
 
 .hero {
@@ -159,23 +160,35 @@ li a {
   background-color: #eff0f5;
 }
 
-.shortener {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-  margin: -105px 0 90px 0;
-  gap: 15px;
-  border-radius: 10px;
-  background: url("../assets/images/bg-shorten-mobile.svg") right top no-repeat, #3b3054;
+.shortened-urls {
+  margin-bottom: 85px;
 }
 
-.input {
-  padding: 10px 15px;
-  border: 1px solid transparent;
+.url-container {
+  padding: 12px 0;
+  margin-bottom: 23px;
   border-radius: 5px;
-  font-family: "Poppins", sans-serif;
-  font-size: 0.9em;
-  color: #9e9aa7;
+  font-size: 0.88em;
+  background-color: white;
+}
+
+.shortened-url span, .original-url {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.original-url {
+  padding: 0 15px 10px 15px;
+  color: #35323e;
+}
+
+.shortened-url {
+  padding: 13px 15px 0 15px;
+}
+.shortened-url span {
+  color: #2acfcf;
 }
 
 .stats {
@@ -258,6 +271,34 @@ li a {
   color: white;
 }
 
+.shortener {
+  padding: 25px;
+  margin: -105px 0 25px 0;
+  border-radius: 10px;
+  background: url("../assets/images/bg-shorten-mobile.svg") right top no-repeat, #3b3054;
+}
+
+.input {
+  width: 100%;
+  padding: 8px 15px;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9em;
+  color: #9e9aa7;
+}
+
+.error {
+  font-style: italic;
+  font-size: 0.68em;
+  color: #f46262;
+}
+
+.fa-bars {
+  font-size: 1.6em;
+  color: #9e9aa7;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -308,6 +349,15 @@ li a {
   margin: 0 auto;
   border-top: 1px solid #bfbfbf;
   opacity: 0.2;
+}
+
+.separator--all {
+  width: 100%;
+}
+
+.error-label {
+  border: 3px solid #f46262;
+  color: #f46262;
 }
 
 /*# sourceMappingURL=styles.css.map */

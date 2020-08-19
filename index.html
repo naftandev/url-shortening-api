@@ -23,16 +23,16 @@
                         <a href="#">Features</a>
                     </li>
                     <li>
-                        <a href="./">Pricing</a>
+                        <a href="#">Pricing</a>
                     </li>
                     <li>
-                        <a href="./">Resources</a>
+                        <a href="#">Resources</a>
                     </li>
                 </ul>
                 <div class="separator"></div>
                 <ul>
                     <li>
-                        <a href="./">Login</a>
+                        <a href="#">Login</a>
                     </li>
                     <li>
                         <button class="button button--register" type="button" title="Sign Up">Sign Up</button>
@@ -52,9 +52,15 @@
         </section>
         <div class="content">
             <form id="shortener" method="POST" class="shortener">
-                <input id="url" class="input" type="text" name="url" id="url" placeholder="Shorten a link here..." title="Shorten a link here...">
+                <input class="input" type="url" name="url" placeholder="Shorten a link here..." title="Shorten a link here..." required>
+                <span class="error">
+                    <!-- Error render -->
+                </span>
                 <button id="shorten" class="button button--shortener" type="submit" title="Shorten It!">Shorten It!</button>
             </form>
+            <div id="shortenedUrlsContainer" class="shortened-urls">
+                <!-- Shortened URLs render -->
+            </div>
             <section class="stats">
                 <h2 class="title title--stats">Advanced Statistics</h2>
                 <p class="description description--stats">Track how your links are performing across the web with our advanced statistics dashboard.</p>

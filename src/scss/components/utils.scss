@@ -4,3 +4,12 @@
   border-top: 1px solid $light-color;
   opacity: .20;
 }
+
+.separator--all {
+  width: 100%;
+}
+
+.error-label {
+  border: 3px solid $error-color;
+  color: $error-color;
+}
