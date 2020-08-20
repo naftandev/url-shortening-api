@@ -39,10 +39,10 @@ function checkRender(hash) {
   }
 }
 
-function template(hash, original, date) {
+function template(hash, original) {
   return(`
     <div class="url-container">
-        <span class="original-url">${original}</span>
+        <span class="original-url" title="${original}">${original}</span>
         <div class="separator separator--all"></div>
         <div class="shortened-url-wrapper">
             <span class="shortened-url">https://rel.ink/${hash}</span>
@@ -55,8 +55,8 @@ function template(hash, original, date) {
 async function renderShortenedUrl(url) {
   // Render shortened URL
   const data = await getShortenedUrl(url)
-  const { hashid: hash, url: original, created_at: date } = data
-  const urlTemplate = template(hash, original, date)
+  const { hashid: hash, url: original } = data
+  const urlTemplate = template(hash, original)
   checkRender(hash)
   $shortenedUrlsContainer.insertAdjacentHTML('afterbegin', urlTemplate)
   // Copy shortened URL

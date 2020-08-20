@@ -178,15 +178,12 @@ li a {
   background-color: white;
 }
 
-.shortened-url, .original-url {
+.original-url {
   display: block;
   overflow: hidden;
+  padding: 0 15px 10px 15px;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.original-url {
-  padding: 0 15px 10px 15px;
   color: #35323e;
 }
 

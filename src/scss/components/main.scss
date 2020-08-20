@@ -49,17 +49,13 @@
   background-color: white;
 }
 
-%overflow-dots-text {
+.original-url {
   display: block;
   overflow: hidden;
+  padding: 0 15px 10px 15px;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.original-url {
-  padding: 0 15px 10px 15px;
   color: $dark-color;
-  @extend %overflow-dots-text
 }
 
 .shortened-url-wrapper {
@@ -68,7 +64,6 @@
 
 .shortened-url {
   color: $secundary-color;
-  @extend %overflow-dots-text
 }
 
 .stats {
