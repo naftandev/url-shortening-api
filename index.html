@@ -52,7 +52,10 @@
         </section>
         <div class="content">
             <form id="shortener" method="POST" class="shortener">
-                <input class="input" type="url" name="url" placeholder="Shorten a link here..." title="Shorten a link here..." required>
+                <div class="input-wrapper">
+                    <input class="input" type="url" name="url" placeholder="Shorten a link here..." title="Shorten a link here..." required>
+                    <figure class="loader hide"></figure>
+                </div>
                 <span class="error">
                     <!-- Error render -->
                 </span>

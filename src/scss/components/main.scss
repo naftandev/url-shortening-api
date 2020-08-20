@@ -62,12 +62,13 @@
   @extend %overflow-dots-text
 }
 
-.shortened-url {
+.shortened-url-wrapper {
   padding: 13px 15px 0 15px;
-  span {
-    color: $secundary-color;
-    @extend %overflow-dots-text
-  }
+}
+
+.shortened-url {
+  color: $secundary-color;
+  @extend %overflow-dots-text
 }
 
 .stats {

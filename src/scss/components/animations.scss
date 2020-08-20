@@ -1,0 +1,23 @@
+.copyIn {
+  animation: copyIn .2s forwards;
+}
+@keyframes copyIn {
+  from {
+    background-color: $secundary-color;
+  }
+  to {
+    background-color: $primary-color;
+  }
+}
+
+.copyOut {
+  animation: copyOut .2s forwards;
+}
+@keyframes copyOut {
+  from {
+    background-color: $primary-color;
+  }
+  to {
+    background-color: $secundary-color;
+  }
+}

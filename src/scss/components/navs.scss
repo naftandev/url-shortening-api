@@ -21,6 +21,9 @@
   li a {
     font-weight: 700;
     color: white;
+    &:active {
+      opacity: .7;
+    }
   }
 }
 

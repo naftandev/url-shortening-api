@@ -8,6 +8,9 @@
   color: white;
   background-color: $secundary-color;
   outline: none;
+  &:active {
+    opacity: .6;
+  }
 }
 
 .button--register {

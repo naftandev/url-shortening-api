@@ -5,14 +5,34 @@
   background: url('../assets/images/bg-shorten-mobile.svg') right top no-repeat, $primary-color;
 }
 
+.input-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
 .input {
   width: 100%;
-  padding: 8px 15px;
+  padding: 8px 28px 8px 14px;
   border: 3px solid transparent;
   border-radius: $radius2;
   font-family: $font;
   font-size: .9em;
   color: $gray-color;
+}
+
+.error-input {
+  border: 3px solid $error-color;
+  color: $error-color;
+}
+
+.loader {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  background: url('../assets/images/loader.svg') 97% center no-repeat;
+  background-size: cover;
 }
 
 .error {

@@ -12,6 +12,10 @@
   filter: brightness(0) invert(1);
 }
 
+%active-links {
+  color: $secundary-color;
+}
+
 .info-links {
   margin-top: 25px;
   ul {
@@ -22,6 +26,9 @@
       opacity: .5;
       a {
         color: white;
+        &:active {
+          @extend %active-links;
+        }
       }
     }
   }
@@ -40,5 +47,8 @@
   font-size: 26px;
   a {
     color: white;
+    &:active {
+      @extend %active-links;
+    }
   }
 }

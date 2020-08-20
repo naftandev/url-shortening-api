@@ -76,6 +76,9 @@ li a {
   font-weight: 700;
   color: white;
 }
+.nav li a:active {
+  opacity: 0.7;
+}
 
 .nav-items {
   opacity: 0;
@@ -92,6 +95,9 @@ li a {
   color: white;
   background-color: #2acfcf;
   outline: none;
+}
+.button:active {
+  opacity: 0.6;
 }
 
 .button--register {
@@ -172,7 +178,7 @@ li a {
   background-color: white;
 }
 
-.shortened-url span, .original-url {
+.shortened-url, .original-url {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -184,10 +190,11 @@ li a {
   color: #35323e;
 }
 
-.shortened-url {
+.shortened-url-wrapper {
   padding: 13px 15px 0 15px;
 }
-.shortened-url span {
+
+.shortened-url {
   color: #2acfcf;
 }
 
@@ -278,14 +285,34 @@ li a {
   background: url("../assets/images/bg-shorten-mobile.svg") right top no-repeat, #3b3054;
 }
 
+.input-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
 .input {
   width: 100%;
-  padding: 8px 15px;
+  padding: 8px 28px 8px 14px;
   border: 3px solid transparent;
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
   font-size: 0.9em;
   color: #9e9aa7;
+}
+
+.error-input {
+  border: 3px solid #f46262;
+  color: #f46262;
+}
+
+.loader {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  background: url("../assets/images/loader.svg") 97% center no-repeat;
+  background-size: cover;
 }
 
 .error {
@@ -313,6 +340,10 @@ li a {
   filter: brightness(0) invert(1);
 }
 
+.social a:active, .info-links ul li a:active {
+  color: #2acfcf;
+}
+
 .info-links {
   margin-top: 25px;
 }
@@ -327,7 +358,6 @@ li a {
 .info-links ul li a {
   color: white;
 }
-
 .title--info-links {
   font-size: 0.85em;
   color: white;
@@ -343,6 +373,33 @@ li a {
 .social a {
   color: white;
 }
+.copyIn {
+  animation: copyIn 0.2s forwards;
+}
+
+@keyframes copyIn {
+  from {
+    background-color: #2acfcf;
+  }
+  to {
+    background-color: #3b3054;
+  }
+}
+.copyOut {
+  animation: copyOut 0.2s forwards;
+}
+
+@keyframes copyOut {
+  from {
+    background-color: #3b3054;
+  }
+  to {
+    background-color: #2acfcf;
+  }
+}
+.hide {
+  visibility: hidden;
+}
 
 .separator {
   width: 85%;
@@ -353,11 +410,6 @@ li a {
 
 .separator--all {
   width: 100%;
-}
-
-.error-label {
-  border: 3px solid #f46262;
-  color: #f46262;
 }
 
 /*# sourceMappingURL=styles.css.map */

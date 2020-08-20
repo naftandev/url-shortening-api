@@ -1,3 +1,7 @@
+.hide {
+  visibility: hidden;
+}
+
 .separator {
   width: 85%;
   margin: 0 auto;
@@ -7,9 +11,4 @@
 
 .separator--all {
   width: 100%;
-}
-
-.error-label {
-  border: 3px solid $error-color;
-  color: $error-color;
 }
