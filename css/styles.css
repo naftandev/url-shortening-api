@@ -130,7 +130,7 @@ li a {
 }
 @media only screen and (min-width: 1024px) {
   .nav li a {
-    color: #bfbfbf;
+    color: #9e9aa7;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -170,12 +170,12 @@ li a {
   outline: none;
 }
 .button:active {
-  opacity: 0.6;
+  opacity: 0.75;
 }
 @media only screen and (min-width: 1024px) {
   .button:hover {
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0.75;
   }
 }
 
@@ -304,7 +304,7 @@ li a {
 
 .description {
   line-height: 1.7em;
-  color: #bfbfbf;
+  color: #9e9aa7;
 }
 
 .description--hero {

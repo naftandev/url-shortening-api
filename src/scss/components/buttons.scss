@@ -9,12 +9,12 @@
   background-color: $secundary-color;
   outline: none;
   &:active {
-    opacity: .6;
+    opacity: .75;
   }
   @include media(display3) {
     &:hover {
       cursor: pointer;
-      opacity: .6;
+      opacity: .75;
     }
   }
 }
