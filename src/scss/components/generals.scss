@@ -6,7 +6,23 @@
 
 body {
   font-family: $font;
-  font-size: $size;
+  font-size: $size1;
+  @include media(display3) {
+    font-size: $size2;
+  }
+
+}
+
+.container {
+  display: inherit;
+  flex-direction: inherit;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: inherit;
+  position: inherit;
+  justify-content: inherit;
+  align-items: inherit;
 }
 
 figure {

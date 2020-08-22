@@ -1,4 +1,9 @@
 .fa-bars {
   font-size: 1.6em;
   color: $gray-color;
+  &::before {
+    @include media(display3) {
+      display: none;
+    }
+  }
 }

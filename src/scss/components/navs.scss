@@ -1,5 +1,5 @@
 .nav {
-  width: 87%;
+  width: 100%;
   max-height: 0;
   border-radius: $radius;
   position: absolute;
@@ -11,9 +11,20 @@
   ul {
     padding: 23px 25px 15px 25px;
     text-align: center;
+    @include media(display3) {
+      display: flex;
+      width: 300px;
+      padding: 0;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
   div + ul {
     padding: 15px 25px 23px 25px;
+    @include media(display3) {
+      width: 200px;
+      padding: 0;
+    }
   }
   li {
     padding: 15px 0;
@@ -24,10 +35,28 @@
     &:active {
       opacity: .7;
     }
+    @include media(display3) {
+      color: $light-color;
+    }
+    @include media(display3) {
+      &:hover {
+        color: $dark-color;
+      }
+    }
+  }
+  @include media(display3) {
+    max-height: none;
+    position: relative;
+    top: 0;
+    background-color: transparent;
   }
 }
 
 .nav-items {
-  opacity: 0;
   transition: opacity .2s;
+  @include media(display3) {
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+  }
 }

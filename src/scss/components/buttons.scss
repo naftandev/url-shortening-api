@@ -1,6 +1,6 @@
 .button {
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 25px;
   border: 1px solid transparent;
   font-family: $font;
   font-weight: 700;
@@ -11,31 +11,51 @@
   &:active {
     opacity: .6;
   }
+  @include media(display3) {
+    &:hover {
+      cursor: pointer;
+      opacity: .6;
+    }
+  }
 }
 
 .button--register {
   border-radius: $radius3;
+  font-size: 1em;
 }
 
 .button--start {
-  width: 200px;
+  width: 180px;
   padding: 15px 20px;
   border-radius: $radius3;
 }
 
 .button--hero {
   padding: 13px;
-  font-size: 1.1em;
 }
 
 .button--shortener {
   margin-top: 11px;
   border-radius: $radius2;
+  @include media(display5) {
+    width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    margin-top: 0;
+  }
 }
 
 .button--copy {
+  width: 90%;
   padding: 7.5px;
   margin: 12px 0 5px 0;
   border-radius: $radius2;
   font-size: .95em;
+  @include media(display5) {
+    width: 115px;
+    margin: 0;
+  }
+  @include media(display3) {
+    width: 105px;
+  }
 }

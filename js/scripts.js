@@ -21,10 +21,12 @@ async function getShortenedUrl(url) {
 
 function showHideMenu() {
   $menu.style.maxHeight ? $menu.style.maxHeight = null : $menu.style.maxHeight = `${$menu.scrollHeight}px`
+  $menu.addEventListener('transitionend', showHideMenuContent)
 }
 
 function showHideMenuContent() {
   $menu.style.maxHeight ? $menu.querySelector('.nav-items').style.opacity = '1' : $menu.querySelector('.nav-items').style.opacity = '0'
+  $menu.removeEventListener('transitionend', showHideMenuContent)
 }
 
 function checkRender(hash) {
@@ -44,10 +46,8 @@ function template(hash, original) {
     <div class="url-container">
         <span class="original-url" title="${original}">${original}</span>
         <div class="separator separator--all"></div>
-        <div class="shortened-url-wrapper">
-            <span class="shortened-url">https://rel.ink/${hash}</span>
-            <button class="button button--copy" type="button" title="Copy">Copy</button>
-        </div>
+        <span class="shortened-url">https://rel.ink/${hash}</span>
+        <button class="button button--copy" type="button" title="Copy">Copy</button>
     </div>
   `)
 }
@@ -115,5 +115,4 @@ function shortenUrl(event) {
 }
 
 $menu_button.addEventListener('click', showHideMenu)
-$menu.addEventListener('transitionend', showHideMenuContent)
 $shorten.addEventListener('click', shortenUrl)

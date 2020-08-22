@@ -7,6 +7,9 @@
   margin: 0 auto;
   border-top: 1px solid $light-color;
   opacity: .20;
+  @include media(display5) {
+    display: none;
+  }
 }
 
 .separator--all {

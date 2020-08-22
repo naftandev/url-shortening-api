@@ -5,11 +5,22 @@
   align-items: center;
   text-align: center;
   background-color: $very-dark-color;
+  @include media(display3) {
+    flex-direction: row;
+    height: 310px;
+    padding: 70px 40px 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 .logo--footer {
   margin-bottom: 23px;
   filter: brightness(0) invert(1);
+  @include media(display3) {
+    margin-right: 165px;
+  }
 }
 
 %active-links {
@@ -29,8 +40,17 @@
         &:active {
           @extend %active-links;
         }
+        @include media(display3) {
+          &:hover {
+            cursor: pointer;
+            color: $secundary-color;
+          }
+        }
       }
     }
+  }
+  @include media(display3) {
+    margin-top: 0;
   }
 }
 
@@ -41,14 +61,23 @@
 
 .social {
   display: flex;
-  width: 225px;
+  width: 175px;
   margin: 35px 0 10px 0;
-  justify-content: space-evenly;
+  justify-content: space-between;
   font-size: 26px;
   a {
     color: white;
     &:active {
       @extend %active-links;
     }
+    @include media(display3) {
+      &:hover {
+        cursor: pointer;
+        color: $secundary-color;
+      }
+    }
+  }
+  @include media(display3) {
+    margin-top: 0;
   }
 }

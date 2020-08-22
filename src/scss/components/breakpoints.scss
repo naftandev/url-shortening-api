@@ -1,0 +1,20 @@
+@mixin media($breakpoint) {
+  @if $breakpoint == display1 {
+    @media only screen and (min-width: 375px) { @content }
+  }
+  @if $breakpoint == display2 {
+    @media only screen and (min-width: 620px) { @content }
+  }
+  @if $breakpoint == display3 {
+    @media only screen and (min-width: 1024px) { @content }
+  }
+  @if $breakpoint == display4 {
+    @media only screen and (min-width: 1275px) { @content }
+  }
+  @if $breakpoint == display5 {
+    @media only screen and (min-width: 768px) { @content }
+  }
+  @if $breakpoint == display6 {
+    @media only screen and (min-width: 1441px) { @content }
+  }
+}
