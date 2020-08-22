@@ -1,10 +1,13 @@
+// Variables
+const breakpoint = window.matchMedia('only screen and (min-width: 1024px)')
+const URL_API = 'https://rel.ink/api/links/'
 const $menu_button = document.getElementById('menu_button')
 const $menu = document.getElementById('menu')
 const $shortener = document.getElementById('shortener')
 const $shorten = document.getElementById('shorten')
 const $shortenedUrlsContainer = document.getElementById('shortenedUrlsContainer')
-const URL_API = 'https://rel.ink/api/links/'
 
+// POST URL
 async function getShortenedUrl(url) {
   let headers = new Headers()
   headers.append("Content-Type", "application/json")
@@ -19,16 +22,19 @@ async function getShortenedUrl(url) {
   return data
 }
 
+// Show and hide menu
 function showHideMenu() {
   $menu.style.maxHeight ? $menu.style.maxHeight = null : $menu.style.maxHeight = `${$menu.scrollHeight}px`
   $menu.addEventListener('transitionend', showHideMenuContent)
 }
 
+// Show and hide menu content
 function showHideMenuContent() {
   $menu.style.maxHeight ? $menu.querySelector('.nav-items').style.opacity = '1' : $menu.querySelector('.nav-items').style.opacity = '0'
   $menu.removeEventListener('transitionend', showHideMenuContent)
 }
 
+// Check if URL Render exist
 function checkRender(hash) {
   const urlRenders = document.querySelectorAll('.url-container')
   if (urlRenders.length > 0) {
@@ -41,6 +47,7 @@ function checkRender(hash) {
   }
 }
 
+// Create URL template
 function template(hash, original) {
   return(`
     <div class="url-container">
@@ -52,6 +59,7 @@ function template(hash, original) {
   `)
 }
 
+// Render URL
 async function renderShortenedUrl(url) {
   // Render shortened URL
   const data = await getShortenedUrl(url)
@@ -90,6 +98,7 @@ async function renderShortenedUrl(url) {
   $shortener.querySelector('.loader').classList.add('hide')
 }
 
+// Get and ckeck user URL
 function shortenUrl(event) {
   event.preventDefault()
   // Get user URL
@@ -114,5 +123,19 @@ function shortenUrl(event) {
   }
 }
 
-$menu_button.addEventListener('click', showHideMenu)
+// Check display size for menu design
+function responsive(event) {
+  if (event.matches) {
+    $menu.querySelector('.nav-items').style.opacity = '1'
+    $menu.style.maxHeight = null
+    $menu_button.removeEventListener('click', showHideMenu)
+  } else {
+    $menu.querySelector('.nav-items').style.opacity = '0'
+    $menu_button.addEventListener('click', showHideMenu)
+  }
+}
+responsive(breakpoint)
+
+// Add events
 $shorten.addEventListener('click', shortenUrl)
+breakpoint.addEventListener('change', responsive)
