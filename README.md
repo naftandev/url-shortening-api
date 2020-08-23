@@ -1,5 +1,5 @@
 # URL Shortening API
-A WebApp to shorten links quickly and safely using an API
+A responsive WebApp to shorten links quickly and safely using an API
 
 ### Technologies used
 * HTML5
