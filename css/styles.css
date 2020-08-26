@@ -704,10 +704,6 @@ li a {
   }
 }
 
-.social a:active, .info-links ul li a:active {
-  color: #2acfcf;
-}
-
 .info-links {
   margin-top: 25px;
 }
@@ -722,9 +718,14 @@ li a {
 .info-links ul li a {
   color: white;
 }
+.info-links ul li a:active {
+  opacity: 1;
+  color: #2acfcf;
+}
 @media only screen and (min-width: 1024px) {
   .info-links ul li a:hover {
     cursor: pointer;
+    opacity: 1;
     color: #2acfcf;
   }
 }
@@ -748,6 +749,9 @@ li a {
 }
 .social a {
   color: white;
+}
+.social a:active {
+  color: #2acfcf;
 }
 @media only screen and (min-width: 1024px) {
   .social a:hover {

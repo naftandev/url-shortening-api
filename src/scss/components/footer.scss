@@ -23,10 +23,6 @@
   }
 }
 
-%active-links {
-  color: $secundary-color;
-}
-
 .info-links {
   margin-top: 25px;
   ul {
@@ -38,11 +34,13 @@
       a {
         color: white;
         &:active {
-          @extend %active-links;
+          opacity: 1;
+          color: $secundary-color;
         }
         @include media(display3) {
           &:hover {
             cursor: pointer;
+            opacity: 1;
             color: $secundary-color;
           }
         }
@@ -68,7 +66,7 @@
   a {
     color: white;
     &:active {
-      @extend %active-links;
+      color: $secundary-color;
     }
     @include media(display3) {
       &:hover {
