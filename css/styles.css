@@ -713,9 +713,9 @@ li a {
 .info-links ul li {
   padding: 5px 0;
   font-size: 0.85em;
-  opacity: 0.5;
 }
 .info-links ul li a {
+  opacity: 0.5;
   color: white;
 }
 .info-links ul li a:active {
