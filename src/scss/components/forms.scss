@@ -1,19 +1,18 @@
 .shortener {
   padding: 25px;
-  margin: -105px 0 25px 0;
+  margin: -100px 0 25px 0;
   border-radius: $radius;
   background-color: $primary-color;
   background-image: url('../assets/images/bg-shorten-mobile.svg');
   background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
-  @include media(display3) {
-    padding: 35px;
-  }
   @include media(display5) {
     display: grid;
     grid-template: repeat(2, auto) / auto 160px;
     column-gap: 25px;
+    margin-top: -85px;
+    padding: 35px;
     background-image: url('../assets/images/bg-shorten-desktop.svg');
   }
   @include media(display4) {

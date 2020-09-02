@@ -568,7 +568,7 @@ li a {
 
 .shortener {
   padding: 25px;
-  margin: -105px 0 25px 0;
+  margin: -100px 0 25px 0;
   border-radius: 10px;
   background-color: #3b3054;
   background-image: url("../assets/images/bg-shorten-mobile.svg");
@@ -576,16 +576,13 @@ li a {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media only screen and (min-width: 1024px) {
-  .shortener {
-    padding: 35px;
-  }
-}
 @media only screen and (min-width: 768px) {
   .shortener {
     display: grid;
     grid-template: repeat(2, auto)/auto 160px;
     column-gap: 25px;
+    margin-top: -85px;
+    padding: 35px;
     background-image: url("../assets/images/bg-shorten-desktop.svg");
   }
 }
