@@ -43,6 +43,9 @@
     grid-column: 2 / 3;
     margin-top: 0;
   }
+  @include media(display4) {
+    font-size: 1.2em;
+  }
 }
 
 .button--copy {

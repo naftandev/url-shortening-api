@@ -7,16 +7,17 @@
   background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
+  @include media(display3) {
+    padding: 35px;
+  }
   @include media(display5) {
     display: grid;
     grid-template: repeat(2, auto) / auto 160px;
-    row-gap: 10px;
     column-gap: 25px;
     background-image: url('../assets/images/bg-shorten-desktop.svg');
   }
   @include media(display4) {
     grid-template: repeat(2, auto) / auto 190px;
-    padding: 30px;
   }
 }
 
@@ -79,7 +80,7 @@
   font-style: italic;
   font-size: .8em;
   color: $error-color;
-  @include media(display6) {
-    font-size: 1em;
+  @include media(display4) {
+    font-size: 1.15em;
   }
 }

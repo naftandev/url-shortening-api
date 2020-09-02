@@ -206,6 +206,11 @@ li a {
     margin-top: 0;
   }
 }
+@media only screen and (min-width: 1275px) {
+  .button--shortener {
+    font-size: 1.2em;
+  }
+}
 
 .button--copy {
   width: 90%;
@@ -571,11 +576,15 @@ li a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media only screen and (min-width: 1024px) {
+  .shortener {
+    padding: 35px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .shortener {
     display: grid;
     grid-template: repeat(2, auto)/auto 160px;
-    row-gap: 10px;
     column-gap: 25px;
     background-image: url("../assets/images/bg-shorten-desktop.svg");
   }
@@ -583,7 +592,6 @@ li a {
 @media only screen and (min-width: 1275px) {
   .shortener {
     grid-template: repeat(2, auto)/auto 190px;
-    padding: 30px;
   }
 }
 
@@ -659,9 +667,9 @@ li a {
   font-size: 0.8em;
   color: #f46262;
 }
-@media only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1275px) {
   .error {
-    font-size: 1em;
+    font-size: 1.15em;
   }
 }
 
