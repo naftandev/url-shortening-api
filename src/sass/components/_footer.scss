@@ -16,7 +16,7 @@
 }
 
 .logo--footer {
-  margin-bottom: 23px;
+  margin-bottom: 15px;
   filter: brightness(0) invert(1);
   @include media(display3) {
     margin-right: 165px;
@@ -24,12 +24,12 @@
 }
 
 .info-links {
-  margin-top: 25px;
+  margin-top: 34px;
   ul {
-    margin-top: 20px;
+    margin-top: 15px;
     li {
       padding: 5px 0;
-      font-size: .85em;
+      font-size: .95em;
       a {
         opacity: .5;
         color: white;
@@ -53,7 +53,7 @@
 }
 
 .title--info-links {
-  font-size: .85em;
+  font-size: .95em;
   color: white;
 }
 

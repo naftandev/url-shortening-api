@@ -1,6 +1,6 @@
 .shortener {
   padding: 25px;
-  margin: -100px 0 25px 0;
+  margin: -106px 0 25px 0;
   border-radius: $radius;
   background-color: $primary-color;
   background-image: url('../assets/images/bg-shorten-mobile.svg');
@@ -9,14 +9,20 @@
   background-size: cover;
   @include media(display5) {
     display: grid;
-    grid-template: repeat(2, auto) / auto 160px;
+    grid-template: repeat(2, auto) / auto 180px;
     column-gap: 25px;
     margin-top: -85px;
     padding: 35px;
     background-image: url('../assets/images/bg-shorten-desktop.svg');
   }
+  @include media(display3) {
+    padding: 40px;
+    margin-top: -95px;
+  }
   @include media(display4) {
     grid-template: repeat(2, auto) / auto 190px;
+    padding: 50px 60px;
+    margin-top: -120px;
   }
 }
 
@@ -34,9 +40,9 @@
   width: 100%;
   padding: 8px 28px 8px 14px;
   border: 3px solid transparent;
-  border-radius: $radius2;
+  border-radius: $radius;
   font-family: $font;
-  font-size: .9em;
+  font-size: 1em;
   color: $gray-color;
   @include media(display5) {
     padding-right: 40px;
@@ -79,7 +85,10 @@
   font-style: italic;
   font-size: .8em;
   color: $error-color;
+  @include media(display5) {
+    margin-top: 5px;
+  }
   @include media(display4) {
-    font-size: 1.15em;
+    font-size: 1.05em;
   }
 }

@@ -4,7 +4,7 @@
   border: 1px solid transparent;
   font-family: $font;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 1.1em;
   color: white;
   background-color: $secundary-color;
   outline: none;
@@ -25,7 +25,7 @@
 }
 
 .button--start {
-  width: 180px;
+  width: 190px;
   padding: 15px 20px;
   border-radius: $radius3;
 }
@@ -35,8 +35,8 @@
 }
 
 .button--shortener {
-  margin-top: 11px;
-  border-radius: $radius2;
+  margin-top: 15px;
+  border-radius: $radius;
   @include media(display5) {
     width: 100%;
     grid-row: 1 / 2;

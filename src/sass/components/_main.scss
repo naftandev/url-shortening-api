@@ -1,6 +1,6 @@
 .hero {
   display: flex;
-  height: 680px;
+  height: 675px;
   margin-bottom: 145px;
   justify-content: center;
   align-items: flex-end;
@@ -11,7 +11,6 @@
     max-width: 730px;
     padding: 20px;
     @include media(display3) {
-      padding: 0px;
       max-width: 807px;
     }
     @include media(display4) {
@@ -24,6 +23,7 @@
     background-position: center top;
   }
   @include media(display4) {
+    height: 600px;
     margin-bottom: 90px;
     justify-content: flex-start;
     align-items: center;
@@ -38,19 +38,17 @@
 }
 
 .title {
+  font-size: 1.35em;
   font-weight: 700;
   color: $dark-color;
 }
 
 .title--hero {
   margin-bottom: 15px;
-  font-size: 2.1em;
+  font-size: 2.3em;
   line-height: 1.2em;
   @include media(display1) {
-    font-size: 2.7em;
-  }
-  @include media(display3) {
-    font-size: 3.2em;
+    font-size: 2.5em;
   }
   @include media(display4) {
     margin-bottom: 0;
@@ -59,6 +57,7 @@
 }
 
 .description {
+  font-size: 1em;
   line-height: 1.7em;
   color: $gray-color;
 }
@@ -66,11 +65,14 @@
 .description--hero {
   margin-bottom: 25px;
   font-size: 1em;
+  @include media(display1) {
+    font-size: 1.15em;
+  }
   @include media(display2) {
     margin-bottom: 35px;
   }
-  @include media(display3) {
-    font-size: 1.22em;
+  @include media(display4) {
+    font-size: 1.23em;
   }
 }
 
@@ -90,7 +92,6 @@
   padding: 12px 0;
   margin-bottom: 23px;
   border-radius: $radius;
-  font-size: .88em;
   text-align: center;
   background-color: white;
   @include media(display5) {
@@ -136,9 +137,12 @@
 
 .title--stats {
   margin-bottom: 20px;
+  font-size: 1.67em;
   @include media(display3) {
     margin-bottom: 10px;
-    font-size: 2.1em;
+  }
+  @include media(display4) {
+    font-size: 2.15em;
   }
 }
 
@@ -146,10 +150,8 @@
   width: 100%;
   max-width: 300px;
   margin: 0 auto 47px auto;
-  font-size: .9em;
   @include media(display3) {
     max-width: 540px;
-    font-size: 1.05em;
   }
 }
 
@@ -244,19 +246,19 @@
 }
 
 .title--stat {
-  font-size: 1.22em;
   margin-bottom: 15px;
+  font-size: 1.37em;
 }
 
 .description--stat {
-  font-size: .85em;
+  font-size: .96em;
 }
 
 .banner {
   display: flex;
   flex-direction: column;
   height: 300px;
-  gap: 20px;
+  gap: 12px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -271,12 +273,12 @@
 }
 
 .title--banner {
-  font-size: 1.4em;
+  font-size: 1.5em;
   color: white;
   @include media(display1) {
-    font-size: 1.45em;
+    font-size: 1.65em;
   }
-  @include media(display3) {
-    font-size: 2.1em;
+  @include media(display4) {
+    font-size: 2.15em;
   }
 }

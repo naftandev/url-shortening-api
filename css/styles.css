@@ -164,7 +164,7 @@ li a {
   border: 1px solid transparent;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 1.1em;
   color: white;
   background-color: #2acfcf;
   outline: none;
@@ -185,7 +185,7 @@ li a {
 }
 
 .button--start {
-  width: 180px;
+  width: 190px;
   padding: 15px 20px;
   border-radius: 30px;
 }
@@ -195,8 +195,8 @@ li a {
 }
 
 .button--shortener {
-  margin-top: 11px;
-  border-radius: 5px;
+  margin-top: 15px;
+  border-radius: 10px;
 }
 @media only screen and (min-width: 768px) {
   .button--shortener {
@@ -233,7 +233,7 @@ li a {
 
 .hero {
   display: flex;
-  height: 680px;
+  height: 675px;
   margin-bottom: 145px;
   justify-content: center;
   align-items: flex-end;
@@ -247,7 +247,6 @@ li a {
 }
 @media only screen and (min-width: 1024px) {
   .hero__info {
-    padding: 0px;
     max-width: 807px;
   }
 }
@@ -265,6 +264,7 @@ li a {
 }
 @media only screen and (min-width: 1275px) {
   .hero {
+    height: 600px;
     margin-bottom: 90px;
     justify-content: flex-start;
     align-items: center;
@@ -281,23 +281,19 @@ li a {
 }
 
 .title {
+  font-size: 1.35em;
   font-weight: 700;
   color: #35323e;
 }
 
 .title--hero {
   margin-bottom: 15px;
-  font-size: 2.1em;
+  font-size: 2.3em;
   line-height: 1.2em;
 }
 @media only screen and (min-width: 375px) {
   .title--hero {
-    font-size: 2.7em;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .title--hero {
-    font-size: 3.2em;
+    font-size: 2.5em;
   }
 }
 @media only screen and (min-width: 1275px) {
@@ -308,6 +304,7 @@ li a {
 }
 
 .description {
+  font-size: 1em;
   line-height: 1.7em;
   color: #9e9aa7;
 }
@@ -316,14 +313,19 @@ li a {
   margin-bottom: 25px;
   font-size: 1em;
 }
+@media only screen and (min-width: 375px) {
+  .description--hero {
+    font-size: 1.15em;
+  }
+}
 @media only screen and (min-width: 620px) {
   .description--hero {
     margin-bottom: 35px;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1275px) {
   .description--hero {
-    font-size: 1.22em;
+    font-size: 1.23em;
   }
 }
 
@@ -345,7 +347,6 @@ li a {
   padding: 12px 0;
   margin-bottom: 23px;
   border-radius: 10px;
-  font-size: 0.88em;
   text-align: center;
   background-color: white;
 }
@@ -399,11 +400,16 @@ li a {
 
 .title--stats {
   margin-bottom: 20px;
+  font-size: 1.67em;
 }
 @media only screen and (min-width: 1024px) {
   .title--stats {
     margin-bottom: 10px;
-    font-size: 2.1em;
+  }
+}
+@media only screen and (min-width: 1275px) {
+  .title--stats {
+    font-size: 2.15em;
   }
 }
 
@@ -411,12 +417,10 @@ li a {
   width: 100%;
   max-width: 300px;
   margin: 0 auto 47px auto;
-  font-size: 0.9em;
 }
 @media only screen and (min-width: 1024px) {
   .description--stats {
     max-width: 540px;
-    font-size: 1.05em;
   }
 }
 
@@ -523,19 +527,19 @@ li a {
 }
 
 .title--stat {
-  font-size: 1.22em;
   margin-bottom: 15px;
+  font-size: 1.37em;
 }
 
 .description--stat {
-  font-size: 0.85em;
+  font-size: 0.96em;
 }
 
 .banner {
   display: flex;
   flex-direction: column;
   height: 300px;
-  gap: 20px;
+  gap: 12px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -552,23 +556,23 @@ li a {
 }
 
 .title--banner {
-  font-size: 1.4em;
+  font-size: 1.5em;
   color: white;
 }
 @media only screen and (min-width: 375px) {
   .title--banner {
-    font-size: 1.45em;
+    font-size: 1.65em;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1275px) {
   .title--banner {
-    font-size: 2.1em;
+    font-size: 2.15em;
   }
 }
 
 .shortener {
   padding: 25px;
-  margin: -100px 0 25px 0;
+  margin: -106px 0 25px 0;
   border-radius: 10px;
   background-color: #3b3054;
   background-image: url("../assets/images/bg-shorten-mobile.svg");
@@ -579,16 +583,24 @@ li a {
 @media only screen and (min-width: 768px) {
   .shortener {
     display: grid;
-    grid-template: repeat(2, auto)/auto 160px;
+    grid-template: repeat(2, auto)/auto 180px;
     column-gap: 25px;
     margin-top: -85px;
     padding: 35px;
     background-image: url("../assets/images/bg-shorten-desktop.svg");
   }
 }
+@media only screen and (min-width: 1024px) {
+  .shortener {
+    padding: 40px;
+    margin-top: -95px;
+  }
+}
 @media only screen and (min-width: 1275px) {
   .shortener {
     grid-template: repeat(2, auto)/auto 190px;
+    padding: 50px 60px;
+    margin-top: -120px;
   }
 }
 
@@ -608,9 +620,9 @@ li a {
   width: 100%;
   padding: 8px 28px 8px 14px;
   border: 3px solid transparent;
-  border-radius: 5px;
+  border-radius: 10px;
   font-family: "Poppins", sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
   color: #9e9aa7;
 }
 @media only screen and (min-width: 768px) {
@@ -664,9 +676,14 @@ li a {
   font-size: 0.8em;
   color: #f46262;
 }
+@media only screen and (min-width: 768px) {
+  .error {
+    margin-top: 5px;
+  }
+}
 @media only screen and (min-width: 1275px) {
   .error {
-    font-size: 1.15em;
+    font-size: 1.05em;
   }
 }
 
@@ -700,7 +717,7 @@ li a {
 }
 
 .logo--footer {
-  margin-bottom: 23px;
+  margin-bottom: 15px;
   filter: brightness(0) invert(1);
 }
 @media only screen and (min-width: 1024px) {
@@ -710,14 +727,14 @@ li a {
 }
 
 .info-links {
-  margin-top: 25px;
+  margin-top: 34px;
 }
 .info-links ul {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .info-links ul li {
   padding: 5px 0;
-  font-size: 0.85em;
+  font-size: 0.95em;
 }
 .info-links ul li a {
   opacity: 0.5;
@@ -741,7 +758,7 @@ li a {
 }
 
 .title--info-links {
-  font-size: 0.85em;
+  font-size: 0.95em;
   color: white;
 }
 
