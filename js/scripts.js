@@ -6,10 +6,11 @@ const $menu = document.getElementById('menu')
 const $shortener = document.getElementById('shortener')
 const $shorten = document.getElementById('shorten')
 const $shortenedUrlsContainer = document.getElementById('shortenedUrlsContainer')
+const shortened_urls = 'shortened-urls'
 
 // Render storage
 function renderStorage() {
-  const cards = localStorage.getItem('cards')
+  const cards = localStorage.getItem(shortened_urls)
   if (cards) {
     const urls = JSON.parse(cards)
     urls.map(data => {
@@ -21,18 +22,18 @@ function renderStorage() {
 // Add to local storage
 function addLocalStorage(hash, url, origin) {
   if (origin) {
-    const cards = localStorage.getItem('cards')
+    const cards = localStorage.getItem(shortened_urls)
     if(cards) {
       const urls = JSON.parse(cards)
       const check = urls.find(({hashid}) => hashid === hash)
       if (!check) {
         urls.push({hashid: hash, url})
-        localStorage.setItem('cards', JSON.stringify(urls))
+        localStorage.setItem(shortened_urls, JSON.stringify(urls))
       }
     } else {
       const urls = []
       urls.push({hashid: hash, url})
-      localStorage.setItem('cards', JSON.stringify(urls))
+      localStorage.setItem(shortened_urls, JSON.stringify(urls))
     }
   }
 }
@@ -152,6 +153,12 @@ function showHideMenu() {
   $menu.style.maxHeight ? $menu.style.maxHeight = null : $menu.style.maxHeight = `${$menu.scrollHeight}px`
   $menu.addEventListener('transitionend', showHideMenuContent)
 }
+function showHideMenuScroll() {
+  if ($menu.style.maxHeight) {
+    showHideMenu()
+  }
+}
+
 
 // Show and hide menu content
 function showHideMenuContent() {
@@ -165,9 +172,11 @@ function responsive(event) {
     $menu.querySelector('.nav-items').style.opacity = '1'
     $menu.style.maxHeight = null
     $menu_button.removeEventListener('click', showHideMenu)
+    window.removeEventListener('scroll', showHideMenuScroll)
   } else {
     $menu.querySelector('.nav-items').style.opacity = '0'
     $menu_button.addEventListener('click', showHideMenu)
+    window.addEventListener('scroll', showHideMenuScroll)
   }
 }
 
