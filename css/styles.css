@@ -530,16 +530,26 @@ li a {
   margin-bottom: 15px;
   font-size: 1.37em;
 }
+@media only screen and (min-width: 1275px) {
+  .title--stat {
+    font-size: 1.2em;
+  }
+}
 
 .description--stat {
   font-size: 0.96em;
+}
+@media only screen and (min-width: 1275px) {
+  .description--stat {
+    font-size: 0.84em;
+  }
 }
 
 .banner {
   display: flex;
   flex-direction: column;
   height: 300px;
-  gap: 35px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -673,7 +683,7 @@ li a {
 
 .error {
   font-style: italic;
-  font-size: 0.8em;
+  font-size: 0.85em;
   color: #f46262;
 }
 @media only screen and (min-width: 768px) {

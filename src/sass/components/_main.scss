@@ -248,17 +248,23 @@
 .title--stat {
   margin-bottom: 15px;
   font-size: 1.37em;
+  @include media(display4) {
+    font-size: 1.2em;
+  }
 }
 
 .description--stat {
   font-size: .96em;
+  @include media(display4) {
+    font-size: .84em;
+  }
 }
 
 .banner {
   display: flex;
   flex-direction: column;
   height: 300px;
-  gap: 35px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
   text-align: center;
