@@ -26,41 +26,34 @@ function app () {
       const cards = localStorage.getItem(shortened_urls)
       if(cards) {
         const urls = JSON.parse(cards)
-        const check = urls.find(({hashid}) => hashid === hash)
-        if (!check) {
-          urls.push({hashid: hash, url})
-          localStorage.setItem(shortened_urls, JSON.stringify(urls))
+        const check = urls.findIndex(({original_link}) => original_link === url)
+        if (check >= 0) {
+          urls.splice(check, 1)
         }
+        urls.push({code: hash, original_link: url})
+        localStorage.setItem(shortened_urls, JSON.stringify(urls))
       } else {
         const urls = []
-        urls.push({hashid: hash, url})
+        urls.push({code: hash, original_link: url})
         localStorage.setItem(shortened_urls, JSON.stringify(urls))
       }
     }
   }
 
-  // POST URL
+  // GET URL
   async function getShortenedUrl(url) {
-    let headers = new Headers()
-    headers.append("Content-Type", "application/json")
-    let body = JSON.stringify({ url: `${url}` })
-    let requestOptions = {
-      method: 'POST',
-      headers,
-      body
-    }
-    const response = await fetch(`${URL_API_BASE}shorten`, requestOptions)
-    const data = await response.json()
+    const response = await fetch(`${URL_API_BASE}shorten?url=${url}`)
+    const {result: data} = await response.json()
     return data
   }
 
   // Check if URL Render exist
-  function checkRender(hashid) {
+  function checkRender(url) {
     const urlRenders = document.querySelectorAll('.url-container')
     if (urlRenders.length > 0) {
       for (let i = 0; i < urlRenders.length; i++) {
-        const check = urlRenders[i].querySelector('.shortened-url').textContent.indexOf(hashid)
-        if (check !== -1) {
+        const check = urlRenders[i].querySelector('.original-url').textContent
+        if (check === url) {
           urlRenders[i].remove()
         }
       }
@@ -73,7 +66,7 @@ function app () {
       <div class="url-container">
           <span class="original-url" title="${url}">${url}</span>
           <div class="separator separator--all"></div>
-          <span class="shortened-url">https://rel.ink/${hashid}</span>
+          <span class="shortened-url">https://shrtco.de/${hashid}</span>
           <button class="button button--copy" type="button" title="Copy">Copy</button>
       </div>
     `)
@@ -84,7 +77,9 @@ function app () {
     // Render shortened URL
     const { code: hash, original_link: url } = data
     const urlTemplate = template(hash, url)
-    checkRender(hash)
+    if (origin === 'new') {
+      checkRender(url)
+    }
     $shortenedUrlsContainer.insertAdjacentHTML('afterbegin', urlTemplate)
     // Copy shortened URL
     const urlRender = $shortenedUrlsContainer.firstElementChild
